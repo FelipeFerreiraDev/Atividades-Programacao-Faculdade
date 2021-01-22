@@ -1,9 +1,8 @@
 /******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
+ * Author: https://github.com/FelipeFerreiraDev
+ * 
+ * Link to the repository: https://github.com/FelipeFerreiraDev/Prog-Faculdade
+ * 
 *******************************************************************************/
 
 #include <stdio.h>
