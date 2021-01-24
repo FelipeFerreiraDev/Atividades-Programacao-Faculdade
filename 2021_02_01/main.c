@@ -14,10 +14,11 @@ int main()
     
     char board[100][100];
     char boardOpc[100][100];
+    char aux[100];
     
-    int quantity = 0; //quantidade de locaçoes
+    int quantity = 0, i = 0, j = 0, count = 0; //quantidade de locaçoes
     
-    int compar = 0;
+    int compar = 0, comparType = 0;
     
     int client[100];
     
@@ -47,7 +48,7 @@ int main()
             o código do cliente
     */
     
-    while(sair==1){
+    /*while(sair==1){
         printf("Digite a placa do veículo para o pagamento: ");
         scanf("%s", boardOpc[countB]);
         printf("Digite o código do cliente: ");
@@ -57,7 +58,7 @@ int main()
         printf("Para continuar cadastrando mais um pagamento digite 1, para ver as outras opções digite 0\n");
         scanf("%d", &sair);
         countB++;
-    }
+    }*/
 
     sair = 1;
     
@@ -67,7 +68,7 @@ int main()
         1. número de locações de cada tipo de veículo;
     */
     
-    while(sair==1) {
+    /*while(sair==1) {
         printf("Digite o tipo do veículo para pesquisar: ");
         scanf("%s", typeCar[0]);
         for(countC; countC<=countA; countC++) {
@@ -80,7 +81,55 @@ int main()
         countC=0;
         printf("Para continuar buscar mais um tipo digite 1, para ver as outras opções digite 0\n");
         scanf("%d", &sair);
-    }
+    }*/
     
-    
+    /* 
+        2. Veiculos do tipo luxo com mais de 10 locações
+    */
+                for(i;i<countA;i++) {
+                    for(j=i+1;j<countA;j++) {
+                        if(compar=strcmp(board[i], board[j]) > 0) {
+                            strcpy(aux,board[i]);
+                            strcpy(board[i],board[j]);
+                            strcpy(board[j],aux);
+                        }
+                    }
+                }
+                
+                count = 1;
+                for(i=0;i<countA;i++){
+                    if(compar=strcmp(board[i],board[i+1]) == 0){
+                        if(comparType=strcmp(type[i], "luxo")==0) {
+                            count=1;
+                        }
+                    }
+                    else {
+                        
+                        for(i=0;i<countA;i++) {
+                            for(j=i+1;j<countA; j++) {
+                                if(compar = strcmp(board[i], board[j])>0) {
+                                    strcpy(aux,board[i]);
+                                    strcpy(board[i],board[j]);
+                                    strcpy(board[j],aux);
+                                }
+                            }
+                        }
+                        
+                        for(i=0; i<countA; i++){
+                            if(compar = strcmp(board[i], board[i+1])==0) {
+                                if(comparType=strcmp(type[i], "luxo")==0) {
+                                    count++;
+                                }
+                            } else if(comparType=strcmp(type[i], "luxo")==0) {
+                                printf("A placa %s aparece %d vezes\n", board[i], count);
+                                
+                                count=1;
+                            }
+                        }
+                        if(comparType=strcmp(type[i], "luxo")==0){
+                            
+                            printf("A placa %s aparece %d vezes\n", board[i], count);
+                        }
+                    }
+                }
 }
