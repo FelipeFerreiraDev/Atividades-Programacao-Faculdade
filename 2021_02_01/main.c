@@ -7,13 +7,6 @@
 #include <string.h>
 #include <stdio.h>
 /******************************************************************************/
-int exA(){
-    
-}
-
-
-
-
 /******************************************************************************/
 int main()
 {
@@ -28,10 +21,12 @@ int main()
     
     int compar = 0, comparType = 0;
     
-    int client[100];
+    char client[100][100];
     
     int payment[100];
     int total=0;
+    
+    int increment = 0;
     
     int countA = 0, countB = 0, countC = 0, sair = 1, opc = 0;
 
@@ -63,7 +58,7 @@ int main()
         printf("Digite a placa do veículo para o pagamento: ");
         scanf("%s", boardOpc[countB]);
         printf("Digite o código do cliente: ");
-        scanf("%d",&client[countB]);
+        scanf("%s", client[countB]);
         printf("Digite o valor que o cliente pagou em inteiros: ");
         scanf("%d",&payment[countB]);
         printf("\n*****************************************************************************************\n");
@@ -79,8 +74,7 @@ int main()
     
     
     
-    
-    
+        
     
     
     /*****************************************************************************************************/
@@ -115,8 +109,8 @@ int main()
     /* 
         2. Veiculos do tipo luxo com mais de 10 locações
     */
-    case 2:
-            for(i;i<countA;i++) {
+    case 2:/*
+            for(i;i<countA;i++) { //para organizar
                 for(j=i+1;j<countA;j++) {
                     if(compar=strcmp(board[i], board[j]) > 0) {
                         strcpy(aux,board[i]);
@@ -126,15 +120,14 @@ int main()
                 }
             }
                 
-            count = 1;
+            count = 1; // Se foi cadastrado é porque tem 1
                 for(i=0;i<countA;i++){
                     if(compar=strcmp(board[i],board[i+1]) == 0){
                         if(comparType=strcmp(type[i], "luxo")==0) {
                             count=1;
                         }
                     }
-                    else {
-                        
+                    else {*/
                         for(i=0;i<countA;i++) {
                             for(j=i+1;j<countA; j++) {
                                 if(compar = strcmp(board[i], board[j])>0) {
@@ -160,10 +153,13 @@ int main()
                             
                             printf("O veículo da placa %s foi locado %d vezes\n", board[i], count);
                         }
-                    }
-                }
+                    //}
+                //}
     break;
     
+    /*
+        3. Total arrecadado para cada veículo e seu tipo
+    */
     case 3:
         for(count=0;count<countB;count++) {
                 strcpy(aux,boardOpc[count]);
@@ -176,5 +172,50 @@ int main()
             
             total=0;
         }
-    }
-}
+        break;
+        
+    
+    case 4:
+        for(count=0;count<countB;count++) {
+                    strcpy(aux,client[count]);
+                for(i=1; i<=countB; i++){
+                    if(strcmp(aux,client[i-1])==0){
+                        total+=payment[i-1];
+                        increment++;
+                    }
+                }
+                total=total/increment;
+                printf("O usuário '%s' pagou R$ %d em média\n", aux, total);
+                total=0;
+                increment=0;
+            }
+            break;
+            
+    case 5:
+        for(count=0;count<countB;count++) {
+                    strcpy(aux,client[count]);
+                for(i=1; i<=countB; i++){
+                    if(strcmp(aux,client[i-1])==0){
+                        total+=payment[i-1];
+                    }
+                }
+                printf("O usuário '%s' pagou R$ %d no total\n", aux, total);
+                total=0;
+            }
+            break;
+            
+    case 6:
+        for(count=0;count<countB;count++) {
+                    strcpy(aux,client[count]);
+                for(i=1; i<=countB; i++){
+                    if(strcmp(aux,client[i-1])==0){
+                        total++;
+                    }
+                }
+                printf("O usuário %s fez %d locações\n", aux, total);
+                total=0;
+            }
+            break
+    }//fim do switch
+    
+}//fim do main
