@@ -85,7 +85,7 @@ int main()
     
     /* 
         2. Veiculos do tipo luxo com mais de 10 locações
-    */
+    
                 for(i;i<countA;i++) {
                     for(j=i+1;j<countA;j++) {
                         if(compar=strcmp(board[i], board[j]) > 0) {
@@ -120,16 +120,16 @@ int main()
                                 if(comparType=strcmp(type[i], "luxo")==0) {
                                     count++;
                                 }
-                            } else if(comparType=strcmp(type[i], "luxo")==0) {
-                                printf("A placa %s aparece %d vezes\n", board[i], count);
+                            } else if(comparType=strcmp(type[i], "luxo")==0 && count>=10) {
+                                printf("O veículo da placa %s foi locado %d vezes\n", board[i], count);
                                 
                                 count=1;
                             }
                         }
-                        if(comparType=strcmp(type[i], "luxo")==0){
+                        if(comparType=strcmp(type[i], "luxo")==0  &&  count>=10){
                             
-                            printf("A placa %s aparece %d vezes\n", board[i], count);
+                            printf("O veículo da placa %s foi locado %d vezes\n", board[i], count);
                         }
                     }
-                }
+                }*/
 }
