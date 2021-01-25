@@ -31,6 +31,7 @@ int main()
     int client[100];
     
     int payment[100];
+    int total=0;
     
     int countA = 0, countB = 0, countC = 0, sair = 1, opc = 0;
 
@@ -73,8 +74,16 @@ int main()
     }
 
     sair = 1;
+    /****************************************************************************************************/
     
     
+    
+    
+    
+    
+    
+    
+    /*****************************************************************************************************/
     printf("Digite o número da opção desejada para emetir um relatório: ");
     scanf("%d", &opc);
     
@@ -154,5 +163,18 @@ int main()
                     }
                 }
     break;
+    
+    case 3:
+        for(count=0;count<countB;count++) {
+                strcpy(aux,boardOpc[count]);
+            for(i=1; i<=countB; i++){
+                if(strcmp(aux,boardOpc[i-1])==0){
+                    total+=payment[count];
+                }
+            }
+            printf("O veículo '%s' arrecadou R$ %d e é do tipo %s\n", aux, total, type[count]);
+            
+            total=0;
+        }
     }
 }
