@@ -6,8 +6,7 @@
 *******************************************************************************/
 #include <string.h>
 #include <stdio.h>
-/******************************************************************************/
-/******************************************************************************/
+
 int main()
 {
     char type[100][100];
@@ -16,6 +15,7 @@ int main()
     char board[100][100];
     char boardOpc[100][100];
     char aux[100];
+    char armazenaAux[100][100];
     
     int quantity = 0, i = 0, j = 0, count = 0; //quantidade de locaçoes
     
@@ -69,15 +69,7 @@ int main()
     }
 
     sair = 1;
-    /****************************************************************************************************/
     
-    
-    
-    
-        
-    
-    
-    /*****************************************************************************************************/
     printf("Digite o número da opção desejada para emetir um relatório: ");
     scanf("%d", &opc);
     
@@ -109,26 +101,7 @@ int main()
     /* 
         2. Veiculos do tipo luxo com mais de 10 locações
     */
-    case 2:/*
-            for(i;i<countA;i++) { //para organizar
-                for(j=i+1;j<countA;j++) {
-                    if(compar=strcmp(board[i], board[j]) > 0) {
-                        strcpy(aux,board[i]);
-                        strcpy(board[i],board[j]);
-                        strcpy(board[j],aux);
-                    }
-                }
-            }
-                
-            count = 1; // Se foi cadastrado é porque tem 1
-                for(i=0;i<countA;i++){
-                    if(compar=strcmp(board[i],board[i+1]) == 0){
-                        if(comparType=strcmp(type[i], "luxo")==0) {
-                            count=1;
-                        }
-                    }
-                    else {*/
-                        for(i=0;i<countA;i++) {
+    case 2:             for(i=0;i<countA;i++) {
                             for(j=i+1;j<countA; j++) {
                                 if(compar = strcmp(board[i], board[j])>0) {
                                     strcpy(aux,board[i]);
@@ -162,16 +135,15 @@ int main()
     */
     case 3:
         for(count=0;count<countB;count++) {
-                strcpy(aux,boardOpc[count]);
-            for(i=1; i<=countB; i++){
-                if(strcmp(aux,boardOpc[i-1])==0){
-                    total+=payment[count];
+                    strcpy(aux,boardOpc[count]);
+                for(i=1; i<=countB; i++){
+                    if(strcmp(aux,boardOpc[i-1])==0){
+                        total+=payment[i-1];
+                    }
                 }
+                printf("O veículo '%s' arrecadou R$ %d \n", aux, total);
+                total=0;
             }
-            printf("O veículo '%s' arrecadou R$ %d e é do tipo %s\n", aux, total, type[count]);
-            
-            total=0;
-        }
         break;
         
     
@@ -215,7 +187,7 @@ int main()
                 printf("O usuário %s fez %d locações\n", aux, total);
                 total=0;
             }
-            break
+            break;
     }//fim do switch
     
 }//fim do main
