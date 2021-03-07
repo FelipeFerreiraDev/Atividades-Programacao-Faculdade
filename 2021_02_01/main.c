@@ -80,7 +80,7 @@ int main()
         printf("\n3-Total arrecadado para cada veículo");
         printf("\n4-Valor médio pago por cliente");
         printf("\n5-Total pago por cliente");
-        printf("\n6-Cliente com mais locações");
+        printf("\n6-Cliente com mais locações: ");
         scanf("%d", &opc);
 
         switch (opc)
@@ -103,7 +103,7 @@ int main()
             printf("A quantidade de locações para o tipo ' %s ' é de: %d\n", typeCar[0], quantity);
             quantity = 0;
             countC = 0;
-            printf("Para continuar a pesquisar digite 1 para parar digite 0\n");
+            printf("Para emitir outro relatório digite 1 para parar digite 0\n");
             scanf("%d", &sair);
             break;
 
@@ -135,7 +135,7 @@ int main()
                 }
                 else if (comparType = strcmp(type[i], "luxo") == 0 && count >= 10)
                 {
-                    printf("O veículo da placa %s foi locado %d vezes\n", board[i], count);
+                    printf("O veículo da placa %s foi locado mais de 10 vezes e é da categoria luxo\n", board[i]);
 
                     count = 1;
                 }
@@ -143,10 +143,10 @@ int main()
             if (comparType = strcmp(type[i], "luxo") == 0 && count >= 10)
             {
 
-                printf("O veículo da placa %s foi locado %d vezes\n", board[i], count);
+                printf("O veículo da placa %s foi locado mais de 10 vezes e é da categoria luxo\n", board[i]);
             }
 
-            printf("Para continuar a pesquisar digite 1 para parar digite 0\n");
+            printf("Para emitir outro relatório digite 1 para parar digite 0\n");
             scanf("%d", &sair);
             break;
 
@@ -168,7 +168,7 @@ int main()
                 total = 0;
             }
 
-            printf("Para continuar a pesquisar digite 1 para parar digite 0\n");
+            printf("Para emitir outro relatório digite 1 para parar digite 0\n");
             scanf("%d", &sair);
             break;
 
@@ -193,7 +193,7 @@ int main()
                 increment = 0;
             }
 
-            printf("Para continuar a pesquisar digite 1 para parar digite 0\n");
+            printf("Para emitir outro relatório digite 1 para parar digite 0\n");
             scanf("%d", &sair);
             break;
 
@@ -215,7 +215,7 @@ int main()
                 total = 0;
             }
 
-            printf("Para continuar a pesquisar digite 1 para parar digite 0\n");
+            printf("Para emitir outro relatório digite 1 para parar digite 0\n");
             scanf("%d", &sair);
             break;
 
@@ -235,10 +235,10 @@ int main()
                 }
             }
 
-            printf("O usuário %s fez %d locações\n", aux, total);
+            printf("O usuário %s fez mais locações\n", aux);
             total = 0;
 
-            printf("Para continuar a pesquisar digite 1 para parar digite 0\n");
+            printf("Para emitir outro relatório digite 1 para parar digite 0\n");
             scanf("%d", &sair);
             break;
         } //fim do switch
