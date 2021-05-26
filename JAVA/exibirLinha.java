@@ -1,7 +1,15 @@
+/*
+*
+*   GitHub: https://github.com/FelipeFerreiraDev/Prog-Faculdade
+*
+* 
+*/
+
+
 import java.util.Scanner;
 
 class Linha {
-    int comprimento; // atributo ou campo
+    int comprimento;
    
     void desenhar(){
         for (int i=0; i<comprimento; i++){
@@ -21,7 +29,7 @@ class Main {
         System.out.printf("Informe um comprimento: ");
         i = ler.nextInt();
         
-        Linha linha = new Linha(); // cria objeto
+        Linha linha = new Linha();
         linha.comprimento = i;
         linha.desenhar();
     }
