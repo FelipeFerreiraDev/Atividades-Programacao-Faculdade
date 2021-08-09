@@ -5,36 +5,34 @@ inputTransaction = document.getElementById("inputTransiction");
 estado = 0;
 posicao = 0;
 
-//aceitacao = [1];
-
-//transicao = [0,1][1,0];
-
+aceitacao = [1];
+transicao = [[0,1],[1,0]];
 
 function automato() {
   while(posicao < entrada.value.length) {
   imprimeCI(entrada.value, estado, posicao);
   elemento = entrada.value[posicao]
-    
-    if(estado == 0 && elemento == '0') {
-      estado = 0;
-    } else if(estado == 0 && elemento == '1') {
-      estado = 1;
-    } else if(estado == 1 && elemento == '0') {
-      estado = 1;
-    } else if(estado == 1 && elemento == '1') {
-      estado = 0;
-    }
-    
+    estado = transicao[estado][Number(elemento)];
   posicao++;   
   }
   imprimeCI(entrada.value, estado, posicao);
   
-  if(estado == 1) {
+  aceita = false;
+ 
+  for(i in aceitacao) {
+    if(estado==1){
+      aceita=true
+    } else {
+      aceita=false
+    }
+  }
+  
+  if(aceita) {
     console.log("ACEITO");
      estado = 0;
      posicao = 0;
      entrada.value = "";
-  } else if(estado == 0) {
+  } else {
      console.log("REJEITA");
      estado = 0;
      posicao = 0;
