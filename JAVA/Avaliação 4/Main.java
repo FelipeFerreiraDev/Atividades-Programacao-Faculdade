@@ -13,7 +13,7 @@ class Main {
     Pilha pi = new Pilha(6);
 
       for (int i=0; i<7; i++){
-            No n = new No("pilha:"+i, i);
+            No n = new No("pilha:"+i);
             pi.empilha(n);
         }
         System.out.println("Imprime pilha...");
