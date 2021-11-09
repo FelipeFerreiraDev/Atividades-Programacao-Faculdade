@@ -1,13 +1,11 @@
-public class No {
-    String nome;
-    int id;
+public class No<T> {
+    T nome;
 
-    public No(String n, int i){
+    public No(T n){
         this.nome = n;
-        this.id = i;
     }
 
     public String tostring(){
-        return  "nome: "+nome+" id: "+id;
+        return  "T: "+nome;
     }
 }
