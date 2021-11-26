@@ -37,8 +37,12 @@ public class StackController implements Initializable{
         if(i<10) {
             No n = new No(fieldInsertValue.getText());
             pi.empilha(n);
-            ult= pi.retornaTopo();
-            lista.add(pi.toString());
+            returnListView.getItems().clear();
+            for(int j=0; j<pi.pilha.length; j++){
+                if(pi.pilha[j]!=null) {
+                    lista.add(pi.pilha[j]);   
+                }
+            }
             returnListView.setItems(lista);
             i++;
             fieldInsertValue.clear();
@@ -57,11 +61,11 @@ public class StackController implements Initializable{
     private void removeValue() throws IOException, ExcecaoPilhaVazia {
        try {
             pi.desempilha();
-            lista.removeAll();
-            lista.clear();
-            ult= pi.retornaTopo();
-            if(pi.toString() != null) {
-                lista.addAll(pi.toString());
+            returnListView.getItems().clear();
+            for(int j=0; j<pi.pilha.length; j++){
+                 if(pi.pilha[j]!=null) {
+                    lista.add(pi.pilha[j]);   
+                }
             }
             
             returnListView.setItems(lista);

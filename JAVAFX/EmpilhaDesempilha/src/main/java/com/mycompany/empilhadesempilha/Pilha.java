@@ -36,25 +36,6 @@ public class Pilha {
             throw new ExcecaoPilhaVazia();
         }
     }
-
-    /*
-    public String imprime(int i){
-        if(pilha[i].tostring() != null) {
-            return ""+i+"-"+pilha[i].tostring();
-        };
-        return null;
-    }*/
-    
-    
-    public String toString(){
-        StringBuilder sb = new StringBuilder();
-        for (int i=0; i<pilha.length; i++){
-            sb.append(pilha[i].toString());
-            sb.append(" | ");
-        }
-        return sb.toString();
-    }
-
     
     public int retornaTopo() {
         return topo;
