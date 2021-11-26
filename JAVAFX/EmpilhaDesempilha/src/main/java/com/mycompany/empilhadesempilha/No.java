@@ -15,7 +15,7 @@ public class No<T> {
         this.nome = n;
     }
 
-    public String tostring(){
+    public String toString(){
         return  "T: "+nome;
     }
 }
