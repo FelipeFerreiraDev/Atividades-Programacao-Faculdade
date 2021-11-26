@@ -17,7 +17,7 @@ public class Pilha {
         if(topo == -1 || topo<(this.TAM-1)) {
             topo = topo +1;
             pilha[topo] = n;
-            return n.tostring();
+            return n.toString();
         }
         else {
             return "PILHA CHEIA...";
@@ -37,12 +37,13 @@ public class Pilha {
         }
     }
 
+    /*
     public String imprime(int i){
         if(pilha[i].tostring() != null) {
             return ""+i+"-"+pilha[i].tostring();
         };
         return null;
-    }
+    }*/
     
     
     public String toString(){

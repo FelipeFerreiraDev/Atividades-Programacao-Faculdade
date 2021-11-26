@@ -38,7 +38,7 @@ public class StackController implements Initializable{
             No n = new No(fieldInsertValue.getText());
             pi.empilha(n);
             ult= pi.retornaTopo();
-            lista.add(pi.imprime(ult));
+            lista.add(pi.toString());
             returnListView.setItems(lista);
             i++;
             fieldInsertValue.clear();
@@ -61,7 +61,7 @@ public class StackController implements Initializable{
             lista.clear();
             ult= pi.retornaTopo();
             if(pi.toString() != null) {
-                lista.addAll(pi.imprime(i));
+                lista.addAll(pi.toString());
             }
             
             returnListView.setItems(lista);
