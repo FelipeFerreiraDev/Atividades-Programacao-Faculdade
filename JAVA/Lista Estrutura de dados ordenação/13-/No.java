@@ -18,3 +18,8 @@ No rotacaoEsquerda(No raiz) {
                 setBalanceamento(direita);
                 return direita;
 }
+
+/** O CÓDIGO É UM EXEMPLO POR ISSO NÃO FOI IMPLEMENTADO
+    O SET SIGNIFICA QUE FOI SETADO UM DETERMINADO VALOR
+    O GET SIGNIFICA QUE UM VALOR DE TEXTO FOI PEGADO DENTRO DE ALGUMA VARIAVEL
+ */
