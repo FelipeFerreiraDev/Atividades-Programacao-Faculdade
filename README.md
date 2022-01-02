@@ -33,6 +33,7 @@ durante os 4 anos de curso.
   - Criação de bancos de dados em memória (usando structs)
   - Manipulação de datas
   - Manipulação de arquivos .txt simples
+  - Pilhas de valores digitados pelo usuário
 
 ## 📦 Desenvolvimento
 
