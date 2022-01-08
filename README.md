@@ -16,7 +16,6 @@ durante os 4 anos de curso.
   - Ponteiros
   - Leitura de arquivos
   - Criação de arquivos
-  - Funções
   - Escrita e sobrescrita
   - Funções
   - Funções Recursivas
