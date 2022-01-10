@@ -21,6 +21,7 @@ durante os 4 anos de curso.
   - Funções Recursivas
   - Alocação de memória
   - Trabalho com datas
+  - Estrutura de projetos em Java
 
 ## 📋 Exemplos de programas feitos
 
