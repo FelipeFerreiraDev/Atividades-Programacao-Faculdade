@@ -16,12 +16,12 @@ durante os 4 anos de curso.
   - Ponteiros
   - Leitura de arquivos
   - Criação de arquivos
-  - Funções
   - Escrita e sobrescrita
   - Funções
   - Funções Recursivas
   - Alocação de memória
   - Trabalho com datas
+  - Estrutura de projetos em Java
 
 ## 📋 Exemplos de programas feitos
 
@@ -33,6 +33,7 @@ durante os 4 anos de curso.
   - Criação de bancos de dados em memória (usando structs)
   - Manipulação de datas
   - Manipulação de arquivos .txt simples
+  - Pilhas de valores digitados pelo usuário
 
 ## 📦 Desenvolvimento
 
