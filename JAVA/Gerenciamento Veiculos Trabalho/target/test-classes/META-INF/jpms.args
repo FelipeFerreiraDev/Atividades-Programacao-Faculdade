@@ -1,0 +1,4 @@
+--patch-module
+com.mycompany.progtrabalho=_
+--add-reads
+com.mycompany.progtrabalho=ALL-UNNAMED
