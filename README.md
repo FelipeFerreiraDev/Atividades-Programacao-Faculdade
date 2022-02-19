@@ -34,6 +34,7 @@ durante os 4 anos de curso.
   - Manipulação de datas
   - Manipulação de arquivos .txt simples
   - Pilhas de valores digitados pelo usuário
+  - Gerenciamento de veículos e motoristas
 
 ## 📦 Desenvolvimento
 
