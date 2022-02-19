@@ -1,0 +1,10 @@
+com\mycompany\progtrabalho\App.class
+modelo\Pessoa.class
+util\JpaUtil.class
+com\mycompany\progtrabalho\SecondaryController.class
+util\Dao.class
+modelo\Veiculo.class
+module-info.class
+modelo\Endereco.class
+com\mycompany\progtrabalho\PrimaryController.class
+modelo\Motorista.class
