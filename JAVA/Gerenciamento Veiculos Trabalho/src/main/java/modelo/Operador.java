@@ -4,9 +4,12 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -16,7 +19,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name="operador")
 @DiscriminatorValue("Operador")
-public class Operador extends Pessoa {
+
+@NamedQueries({
+    @NamedQuery(name = "Operador.autenticar", query = "SELECT o FROM Operador o WHERE o.login = :login AND o.senha = :senha")
+})
+public class Operador extends Pessoa implements Serializable {
     
     @Column(length = 30)
     private String login;
@@ -47,6 +54,9 @@ public class Operador extends Pessoa {
     
     public Operador(String nome, Endereco endereco) {
         super(nome, endereco);
+    }
+    
+    public Operador() {
     }
     
      public String toString() {

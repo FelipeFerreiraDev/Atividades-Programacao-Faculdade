@@ -24,6 +24,10 @@ public class Motorista extends Pessoa {
     @Column(length = 30)
     private String secao;
 
+    public Motorista() {
+        
+    }
+    
     public Motorista(String cnh, String secao) {
         this.cnh = cnh;
         this.secao = secao;
@@ -33,8 +37,8 @@ public class Motorista extends Pessoa {
         super(nome, endereco);
     }
     
-     public String toString() {
-        return cnh + " - " + secao;
+    public String toString() {
+        return (this.getNome());
     }
 
     public String getCnh() {

@@ -1,2 +1,3 @@
-util\DaoTest.class
-util\JpaUtilTest.class
+util/DaoTest.class
+util/JpaUtilTest.class
+modelo/BuscadorTest.class
