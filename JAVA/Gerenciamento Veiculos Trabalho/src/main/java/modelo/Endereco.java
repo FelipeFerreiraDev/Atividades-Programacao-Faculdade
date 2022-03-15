@@ -13,20 +13,28 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Endereco {
     
-    private String cep;
+    private String cep; 
     private String logradouro;
     private String complemento;
     private String bairro;
-    private String localidade;
+    private String localidade; 
     private String uf;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi;
     
-    public Endereco(String cep, String logradouro, String complemento, String bairro, String localidade, String uf) {
+    public Endereco(String cep, String logradouro, String complemento, String bairro, String localidade, String uf, String ibge, String gia, String ddd, String siafi) {
         this.cep = cep;
         this.logradouro = logradouro;
         this.complemento = complemento;
         this.bairro = bairro;
         this.localidade = localidade;
         this.uf = uf;
+        this.ibge = ibge;
+        this.gia = gia;
+        this.ddd = ddd;
+        this.siafi = siafi;
     }
     
     public Endereco() {
@@ -36,6 +44,42 @@ public class Endereco {
         this.bairro = "";
         this.localidade = "";
         this.uf = "";
+        this.ibge = "";
+        this.gia = "";
+        this.ddd = "";
+        this.siafi = "";
+    }
+
+    public String getIbge() {
+        return ibge;
+    }
+
+    public void setIbge(String ibge) {
+        this.ibge = ibge;
+    }
+
+    public String getGia() {
+        return gia;
+    }
+
+    public void setGia(String gia) {
+        this.gia = gia;
+    }
+
+    public String getDdd() {
+        return ddd;
+    }
+
+    public void setDdd(String ddd) {
+        this.ddd = ddd;
+    }
+
+    public String getSiafi() {
+        return siafi;
+    }
+
+    public void setSiafi(String siafi) {
+        this.siafi = siafi;
     }
 
     public String getCep() {

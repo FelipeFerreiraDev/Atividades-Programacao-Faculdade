@@ -48,17 +48,17 @@ public class DaoTest {
 //        
 //        dao.inserir(v);
 //    }
-    
-    @Test
-    public void testLista() {
-        Dao<Veiculo> dao = new Dao (Veiculo.class);
-        List<Veiculo> lista = dao.listarTodos();
-        
-        for(Veiculo v : lista) {
-            System.out.println(v);
-        }
-    }
-    
+//    
+//    @Test
+//    public void testLista() {
+//        Dao<Veiculo> dao = new Dao (Veiculo.class);
+//        List<Veiculo> lista = dao.listarTodos();
+//        
+//        for(Veiculo v : lista) {
+//            System.out.println(v);
+//        }
+//    }
+//    
 //    @Test
 //    public void testInsertMotorista() {
 //        Endereco endereco = new Endereco();
@@ -73,19 +73,19 @@ public class DaoTest {
 //        Dao<Motorista> dao = new Dao(Motorista.class);
 //        dao.inserir(m);
 //    }
-    
-    @Test
-    public void testInsertOperador() {
-        Endereco endereco = new Endereco();
-        endereco.setCep("28306-280");
-        endereco.setLocalidade("Bandeirantes");
-        endereco.setLogradouro("Rua torta");
-        endereco.setUf("PR");
-        
-        Operador o = new Operador("Mateus", endereco);
-        o.setLogin("mateuzin157");
-        o.setSenha("123matomateus");
-        Dao<Operador> dao = new Dao(Operador.class);
-        dao.inserir(o);
-    }
+//    
+//    @Test
+//    public void testInsertOperador() {
+//        Endereco endereco = new Endereco();
+//        endereco.setCep("28306-280");
+//        endereco.setLocalidade("Bandeirantes");
+//        endereco.setLogradouro("Rua torta");
+//        endereco.setUf("PR");
+//        
+//        Operador o = new Operador("Mateus", endereco);
+//        o.setLogin("mateuzin157");
+//        o.setSenha("123matomateus");
+//        Dao<Operador> dao = new Dao(Operador.class);
+//        dao.inserir(o);
+//    }
 }
