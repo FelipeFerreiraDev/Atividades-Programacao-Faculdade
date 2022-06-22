@@ -1,4 +1,4 @@
-### @ Author: Felipe Ferreira Dev
+### @Author: Felipe Ferreira Dev
 
 
 import collections
