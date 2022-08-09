@@ -2,25 +2,34 @@ package ponte;
 
 public class Onibus {
     
-    Boolean poltronas[] = new Boolean[21];
+    Boolean poltronas[] = new Boolean[1000];
     
-    public synchronized void comprar(Pessoa p) throws InterruptedException{
-        if(poltronas[p.assento] == false) {
-            poltronas[p.assento] = true;
-            System.out.println(p.getName()+ " está no assento: " + p.assento);
-            Thread.sleep(1000);
-            System.out.println("");
+    public void comprar(Pessoa p) throws InterruptedException{ 
+        int i = poltronasLivres();
+      //  long start = System.nanoTime();
+        if(poltronas[i] == false) {
+            poltronas[i] = true;
+            System.out.println(p.getName()+ " está no assento: " + i);
         }
         else {
-            System.out.println(p.getName()+ " Tentou comprar o assento: " + p.assento);
-            Thread.sleep(1000);
-            System.out.println("Poltrona já comprada!\n");
+            System.out.println(p.getName()+ " Tentou comprar o assento: " + i + " Poltrona já comprada");
         }
+        //long tempofinal = System.nanoTime();
+        //System.out.println("Seg: "+ (tempofinal - start)+ "\n");
     }
     
     public Onibus() {
-        for(int i = 0; i<=20; i++) {
+        for(int i = 0; i<=999; i++) {
             poltronas[i] = false;
         }
+    }
+    
+    public Integer poltronasLivres() {
+        for(int i = 0; i<=999; i++) {
+            if(poltronas[i] == false) {
+                return i;
+            }
+        }
+        return null;
     }
 }
